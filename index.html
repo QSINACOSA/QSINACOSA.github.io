@@ -151,75 +151,247 @@
         </div>
     </div>
 
-    <script>
-        const vocabData = [
-            { word: "concentration", meaning: "n. 集中；专心", mastered: false },
-            { word: "mechanism", meaning: "n. 机制；原理", mastered: false },
-            { word: "substance", meaning: "n. 物质；实质", mastered: false },
-            { word: "adequate", meaning: "adj. 足够的；适当的", mastered: false },
-            { word: "perspective", meaning: "n. 观点；视角", mastered: false }
-        ];
+<script>
+const vocabData = [
+    { word: "abandon", meaning: "v. 放弃；抛弃", mastered: false },
+    { word: "abide", meaning: "v. 遵守；忍受", mastered: false },
+    { word: "abolish", meaning: "v. 废除；取消", mastered: false },
+    { word: "abrupt", meaning: "adj. 突然的；唐突的", mastered: false },
+    { word: "absorb", meaning: "v. 吸收；吸引", mastered: false },
+    { word: "abstract", meaning: "adj. 抽象的；n. 摘要", mastered: false },
+    { word: "abundant", meaning: "adj. 丰富的；充裕的", mastered: false },
+    { word: "access", meaning: "n. 通道；v. 访问", mastered: false },
+    { word: "accommodate", meaning: "v. 容纳；适应", mastered: false },
+    { word: "accompany", meaning: "v. 陪伴；伴随", mastered: false },
+    { word: "accomplish", meaning: "v. 完成；实现", mastered: false },
+    { word: "accord", meaning: "n. 一致；v. 给予", mastered: false },
+    { word: "accumulate", meaning: "v. 积累；积聚", mastered: false },
+    { word: "accurate", meaning: "adj. 准确的；精确的", mastered: false },
+    { word: "achieve", meaning: "v. 实现；达到", mastered: false },
+    { word: "acknowledge", meaning: "v. 承认；致谢", mastered: false },
+    { word: "acquire", meaning: "v. 获得；取得", mastered: false },
+    { word: "adapt", meaning: "v. 适应；改编", mastered: false },
+    { word: "adequate", meaning: "adj. 足够的；适当的", mastered: false },
+    { word: "adhere", meaning: "v. 粘附；坚持", mastered: false },
+    { word: "adjust", meaning: "v. 调整；适应", mastered: false },
+    { word: "administer", meaning: "v. 管理；执行", mastered: false },
+    { word: "admire", meaning: "v. 钦佩；羡慕", mastered: false },
+    { word: "admit", meaning: "v. 承认；准许进入", mastered: false },
+    { word: "adopt", meaning: "v. 采用；收养", mastered: false },
+    { word: "advance", meaning: "v. 前进；n. 进展", mastered: false },
+    { word: "advantage", meaning: "n. 优势；利益", mastered: false },
+    { word: "adverse", meaning: "adj. 不利的；相反的", mastered: false },
+    { word: "advise", meaning: "v. 建议；劝告", mastered: false },
+    { word: "advocate", meaning: "v. 提倡；n. 倡导者", mastered: false },
+    { word: "affect", meaning: "v. 影响；假装", mastered: false },
+    { word: "afford", meaning: "v. 买得起；提供", mastered: false },
+    { word: "agency", meaning: "n. 代理；机构", mastered: false },
+    { word: "agenda", meaning: "n. 议程；日程", mastered: false },
+    { word: "aggressive", meaning: "adj. 侵略性的；有进取心的", mastered: false },
+    { word: "alleviate", meaning: "v. 减轻；缓解", mastered: false },
+    { word: "allocate", meaning: "v. 分配；拨出", mastered: false },
+    { word: "alter", meaning: "v. 改变；修改", mastered: false },
+    { word: "alternative", meaning: "n. 选择；adj. 供选择的", mastered: false },
+    { word: "amateur", meaning: "n. 业余爱好者；adj. 业余的", mastered: false },
+    { word: "amaze", meaning: "v. 使惊奇；使惊愕", mastered: false },
+    { word: "ambiguous", meaning: "adj. 模糊不清的；模棱两可的", mastered: false },
+    { word: "ambition", meaning: "n. 野心；抱负", mastered: false },
+    { word: "amend", meaning: "v. 修正；改进", mastered: false },
+    { word: "analyze", meaning: "v. 分析；分解", mastered: false },
+    { word: "annoy", meaning: "v. 使恼怒；打扰", mastered: false },
+    { word: "anticipate", meaning: "v. 预期；预料", mastered: false },
+    { word: "anxiety", meaning: "n. 焦虑；渴望", mastered: false },
+    { word: "apparent", meaning: "adj. 明显的；表面上的", mastered: false },
+    { word: "appeal", meaning: "v. 呼吁；上诉；n. 吸引力", mastered: false },
+    { word: "appear", meaning: "v. 出现；显得", mastered: false },
+    { word: "applaud", meaning: "v. 鼓掌；称赞", mastered: false },
+    { word: "apply", meaning: "v. 申请；应用", mastered: false },
+    { word: "appoint", meaning: "v. 任命；约定", mastered: false },
+    { word: "appreciate", meaning: "v. 感激；欣赏", mastered: false },
+    { word: "approach", meaning: "v. 接近；n. 方法", mastered: false },
+    { word: "approve", meaning: "v. 批准；赞成", mastered: false },
+    { word: "arise", meaning: "v. 出现；上升", mastered: false },
+    { word: "arouse", meaning: "v. 引起；唤醒", mastered: false },
+    { word: "arrange", meaning: "v. 安排；整理", mastered: false },
+    { word: "arrest", meaning: "v. 逮捕；阻止", mastered: false },
+    { word: "articulate", meaning: "v. 清晰表达；adj. 发音清晰的", mastered: false },
+    { word: "artificial", meaning: "adj. 人造的；虚伪的", mastered: false },
+    { word: "assess", meaning: "v. 评估；评价", mastered: false },
+    { word: "assign", meaning: "v. 分配；指派", mastered: false },
+    { word: "assist", meaning: "v. 帮助；协助", mastered: false },
+    { word: "associate", meaning: "v. 联想；交往；n. 同事", mastered: false },
+    { word: "assume", meaning: "v. 假定；承担", mastered: false },
+    { word: "assure", meaning: "v. 保证；使确信", mastered: false },
+    { word: "attach", meaning: "v. 附上；使依恋", mastered: false },
+    { word: "attain", meaning: "v. 达到；获得", mastered: false },
+    { word: "attempt", meaning: "v. 尝试；n. 企图", mastered: false },
+    { word: "attend", meaning: "v. 出席；照料", mastered: false },
+    { word: "attract", meaning: "v. 吸引；引起注意", mastered: false },
+    { word: "attribute", meaning: "v. 归因于；n. 属性", mastered: false },
+    { word: "audience", meaning: "n. 观众；听众", mastered: false },
+    { word: "authority", meaning: "n. 权威；当局", mastered: false },
+    { word: "automate", meaning: "v. 使自动化", mastered: false },
+    { word: "available", meaning: "adj. 可获得的；有空的", mastered: false },
+    { word: "avoid", meaning: "v. 避免；避开", mastered: false },
+    { word: "award", meaning: "n. 奖；v. 授予", mastered: false },
+    { word: "aware", meaning: "adj. 意识到的；知道的", mastered: false },
+    { word: "awesome", meaning: "adj. 令人惊叹的；可怕的", mastered: false },
+    { word: "backward", meaning: "adj. 向后的；落后的", mastered: false },
+    { word: "balance", meaning: "n. 平衡；余额", mastered: false },
+    { word: "ban", meaning: "v. 禁止；n. 禁令", mastered: false },
+    { word: "bare", meaning: "adj. 赤裸的；稀少的", mastered: false },
+    { word: "barrier", meaning: "n. 障碍；屏障", mastered: false },
+    { word: "base", meaning: "n. 基础；底部", mastered: false },
+    { word: "bear", meaning: "v. 忍受；承担", mastered: false },
+    { word: "behalf", meaning: "n. 代表；利益", mastered: false },
+    { word: "behave", meaning: "v. 表现；举止", mastered: false },
+    { word: "belief", meaning: "n. 信念；信仰", mastered: false },
+    { word: "benefit", meaning: "n. 利益；v. 有益于", mastered: false },
+    { word: "bias", meaning: "n. 偏见；偏爱", mastered: false },
+    { word: "bind", meaning: "v. 捆绑；约束", mastered: false },
+    { word: "blame", meaning: "v. 责备；n. 责任", mastered: false },
+    { word: "blend", meaning: "v. 混合；n. 混合物", mastered: false },
+    { word: "boost", meaning: "v. 促进；n. 推动", mastered: false }
+];
 
-        let currentWordIndex = null;
+// 乱序算法
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
-        function renderVocabList() {
-            const listEl = document.getElementById("vocabList");
-            listEl.innerHTML = "";
-            vocabData.forEach((item, index) => {
-                const card = document.createElement("div");
-                card.className = `vocab-card ${item.mastered ? "mastered" : ""}`;
-                card.innerHTML = `
-                    <div class="word">${item.word}</div>
-                    <div class="meaning">${item.meaning}</div>
-                    <div class="progress">${item.mastered ? "✅ 已掌握" : "📝 待复习"}</div>
-                `;
-                card.addEventListener("click", () => openTypingModal(index));
-                listEl.appendChild(card);
-            });
-        }
+// 分页设置
+let currentPage = 1;
+const pageSize = 20;
+let filteredData = [...vocabData];
+let currentData = shuffleArray([...filteredData]);
 
-        function openTypingModal(index) {
-            currentWordIndex = index;
-            const item = vocabData[index];
-            document.getElementById("modalMeaning").textContent = item.meaning;
-            document.getElementById("typingInput").value = "";
-            document.getElementById("feedback").textContent = "";
-            document.getElementById("typingModal").style.display = "flex";
-            document.getElementById("typingInput").focus();
-        }
+// 筛选类型：all / mastered / unmastered
+let filterType = "all";
 
-        function closeTypingModal() {
-            document.getElementById("typingModal").style.display = "none";
-            currentWordIndex = null;
-        }
+function getPageData() {
+    const start = (currentPage - 1) * pageSize;
+    const end = start + pageSize;
+    return currentData.slice(start, end);
+}
 
-        function checkWord() {
-            if (currentWordIndex === null) return;
-            const input = document.getElementById("typingInput").value.trim().toLowerCase();
-            const target = vocabData[currentWordIndex].word.toLowerCase();
-            const feedbackEl = document.getElementById("feedback");
+function renderPagination() {
+    const totalPages = Math.ceil(currentData.length / pageSize);
+    let html = `<div style="text-align: center; margin: 20px 0;">`;
+    if (currentPage > 1) {
+        html += `<button class="btn btn-page" onclick="changePage(${currentPage - 1})">上一页</button>`;
+    }
+    html += `<span style="margin: 0 15px;">第 ${currentPage} / ${totalPages} 页</span>`;
+    if (currentPage < totalPages) {
+        html += `<button class="btn btn-page" onclick="changePage(${currentPage + 1})">下一页</button>`;
+    }
+    html += `</div>`;
+    document.getElementById("pagination").innerHTML = html;
+}
 
-            if (input === target) {
-                feedbackEl.textContent = "✅ 正确！已标记为掌握";
-                feedbackEl.className = "feedback correct";
-                vocabData[currentWordIndex].mastered = true;
-                setTimeout(() => {
-                    closeTypingModal();
-                    renderVocabList();
-                }, 1000);
-            } else {
-                feedbackEl.textContent = "❌ 拼写错误，请再试一次";
-                feedbackEl.className = "feedback wrong";
-            }
-        }
+function changePage(page) {
+    currentPage = page;
+    renderVocabList();
+    renderPagination();
+}
 
-        document.getElementById("submitBtn").addEventListener("click", checkWord);
-        document.getElementById("closeBtn").addEventListener("click", closeTypingModal);
-        document.getElementById("typingInput").addEventListener("keypress", (e) => {
-            if (e.key === "Enter") checkWord();
-        });
+function applyFilter(type) {
+    filterType = type;
+    if (type === "mastered") {
+        filteredData = vocabData.filter(item => item.mastered);
+    } else if (type === "unmastered") {
+        filteredData = vocabData.filter(item => !item.mastered);
+    } else {
+        filteredData = [...vocabData];
+    }
+    currentData = shuffleArray([...filteredData]);
+    currentPage = 1;
+    renderVocabList();
+    renderPagination();
+}
 
-        renderVocabList();
-    </script>
+function renderVocabList() {
+    const listEl = document.getElementById("vocabList");
+    const pageData = getPageData();
+    listEl.innerHTML = "";
+    pageData.forEach((item, index) => {
+        const globalIndex = (currentPage - 1) * pageSize + index;
+        const card = document.createElement("div");
+        card.className = `vocab-card ${item.mastered ? "mastered" : ""}`;
+        card.innerHTML = `
+            <div class="word">${item.word}</div>
+            <div class="meaning">${item.meaning}</div>
+            <div class="progress">${item.mastered ? "✅ 已掌握" : "📝 待复习"}</div>
+        `;
+        card.addEventListener("click", () => openTypingModal(globalIndex));
+        listEl.appendChild(card);
+    });
+}
+
+let currentWordIndex = null;
+
+function openTypingModal(globalIndex) {
+    currentWordIndex = globalIndex;
+    const item = currentData[currentWordIndex];
+    document.getElementById("modalMeaning").textContent = item.meaning;
+    document.getElementById("typingInput").value = "";
+    document.getElementById("feedback").textContent = "";
+    document.getElementById("typingModal").style.display = "flex";
+    document.getElementById("typingInput").focus();
+}
+
+function closeTypingModal() {
+    document.getElementById("typingModal").style.display = "none";
+    currentWordIndex = null;
+}
+
+function checkWord() {
+    if (currentWordIndex === null) return;
+    const input = document.getElementById("typingInput").value.trim().toLowerCase();
+    const target = currentData[currentWordIndex].word.toLowerCase();
+    const feedbackEl = document.getElementById("feedback");
+
+    if (input === target) {
+        feedbackEl.textContent = "✅ 正确！已标记为掌握";
+        feedbackEl.className = "feedback correct";
+        currentData[currentWordIndex].mastered = true;
+        // 同步到原数据
+        const originalIndex = vocabData.findIndex(v => v.word === currentData[currentWordIndex].word);
+        if (originalIndex !== -1) vocabData[originalIndex].mastered = true;
+        setTimeout(() => {
+            closeTypingModal();
+            renderVocabList();
+        }, 1000);
+    } else {
+        feedbackEl.textContent = "❌ 拼写错误，请再试一次";
+        feedbackEl.className = "feedback wrong";
+    }
+}
+
+// 初始化
+document.getElementById("submitBtn").addEventListener("click", checkWord);
+document.getElementById("closeBtn").addEventListener("click", closeTypingModal);
+document.getElementById("typingInput").addEventListener("keypress", (e) => {
+    if (e.key === "Enter") checkWord();
+});
+
+// 添加筛选按钮到页面
+document.querySelector(".header").insertAdjacentHTML("beforeend", `
+    <div style="margin: 20px 0;">
+        <button class="btn btn-filter ${filterType === 'all' ? 'btn-primary' : ''}" onclick="applyFilter('all')">全部</button>
+        <button class="btn btn-filter ${filterType === 'unmastered' ? 'btn-primary' : ''}" onclick="applyFilter('unmastered')">待复习</button>
+        <button class="btn btn-filter ${filterType === 'mastered' ? 'btn-primary' : ''}" onclick="applyFilter('mastered')">已掌握</button>
+    </div>
+`);
+
+// 添加分页容器
+document.querySelector(".container").insertAdjacentHTML("beforeend", `<div id="pagination"></div>`);
+
+renderVocabList();
+renderPagination();
+</script>
 </body>
 </html>
